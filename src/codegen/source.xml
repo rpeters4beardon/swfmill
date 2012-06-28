@@ -1414,11 +1414,17 @@
 	<bit name="hasTransform"/>
 	<bit name="hasID"/>
 	<bit name="replace" prop="true"/>
-	<integer name="reserved1" size="5" constant-size="true"/>
+	<integer name="reserved1" size="3" constant-size="true"/>
+  <bit name="hasImage" />
+  <bit name="hasClassName" />
 	<bit name="hasCacheAsBitmap"/>
 	<bit name="hasBlendMode"/>
 	<bit name="hasFilterList"/>
 	<word name="depth" prop="true"/>
+
+  <flagged flag="hasClassName">
+    <string name="className" prop="true" default="NULL"/>
+  </flagged>
 	<flagged flag="hasID">
 		<word name="objectID" prop="true" default="0"/>
 	</flagged>
